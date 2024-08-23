@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes anime {
+            from{
+                transform : translateY(100px);
+            }
+        }
+        .animate { animation: anime 0.5s ease-out}
+
+        @keyframes animate {
+            0% {
+                transform : translateX(1px);
+            }
+            50% {
+                transform : translateX(-3px);
+            }
+            0% {
+                transform : translateX(1px);
+            }
+        }
+        .animated {animation: animate 0.2s ease}
+
+        .text-shadow-sm {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+        }
+        
+        .text-shadow-md {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+        }
+        
+        .text-shadow-lg {
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.25);
+        }
+
+        .text-shadow-xl {
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+        }
+
+        .text-shadow-2xl {
+            text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+<body class="bg-gray-300 overflow-hidden">
+    <header class="absolute top-0 flex items-center justify-center space-x-16 px-8 py-4 text-white w-full h-[50px] bg-gray-500">
+        <a href="index.html">Home</a>
+        <a href="game.html">Play Game</a>
+        <a href="payBill.html">Subscribe</a>
+        <a href="login.html">Log In</a>
+    </header>
+    <div class="w-full h-screen flex items-center space-x-2" >
+        <div class="w-1/2 h-1/2 text-gray-600 flex items-center text-center text-5xl font-bold px-8">Enter your details to pay <br>for your subscription.</div>
+        <div class="w-1/2 h-1/2 pl-24">
+            <section class="absolute w-1/3 h-1/2 bg-white rounded-lg flex flex-col shadow-lg items-center space-y-4 py-4">
+                <form class="w-full h-3/4 flex flex-col relative left-4" action="">
+                    <label for="">Email</label>
+                    <input class="shadow-sm w-11/12 h-1/3 px-2 border-2 rounded-lg outline-none" type="email" name="" id="user" required>
+                    <label for="">Password</label>
+                    <input type="password" id="psw" class="shadow-sm outline-none w-11/12 h-1/3 px-2  border-2  rounded-lg" required>
+                    <label for="">Amount</label>
+                    <input type="text" id="amount" class="shadow s-m outline-none w-11/12 h-1/3 px-2 border-2 rounded-lg" required>
+                </form>
+                <button type="submit" id="submit" class="w-11/12 h-1/6 text-white bg-gray-500 rounded-lg relative -bottom-2">Pay</button>
+            </section>
+            <div id="message" class="hidden absolute bottom-[-290px] bg-white shadow-lg rounded-lg w-[79%] text-black relative mt-4 p-4 animate">
+                <h3 class="font-normal text-sm">Le mot de passe doit contenir les caractères suivants :</h3>
+                <p id="letter" class="text-xs text-red-500 pl-4 relative before:content-['✕'] before:absolute before:left-0">Une lettre minuscule</p>
+                <p id="capital" class="text-xs text-red-500 pl-4 relative before:content-['✕'] before:absolute before:left-0">Une lettre majuscule</p>
+                <p id="number" class="text-xs text-red-500 pl-4 relative before:content-['✕'] before:absolute before:left-0">Un chiffre</p>
+                <p id="length" class="text-xs text-red-500 pl-4 relative before:content-['✕'] before:absolute before:left-0">8 caractères minimum</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/payBill.js"></script>
+</body>
+</html>

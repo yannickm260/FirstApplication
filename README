@@ -1,0 +1,27 @@
+# FirstApplication
+
+## Description
+
+FirstApplication is a simple web application built using HTML, CSS, and Tailwind CSS. It consists of three pages: a home page, a login page, and a subscription page. The application features a responsive design and basic animations, providing a user-friendly experience.
+
+## Features
+
+- **Responsive Layout**: The application is designed to be mobile-friendly and adjusts to different screen sizes.
+- **Navigation**: Easy navigation between pages using a header with links to Home, Play Game, Subscribe, and Log In.
+- **Login Form**: A login form that validates user input with visual feedback for password requirements.
+- **Animations**: Simple animations to enhance user interaction.
+
+## Technologies Used
+
+- **HTML**: Structure of the web pages.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **JavaScript**: For form validation and animations (included in loginScript.js).
+
+## Usage
+
+1. **Home Page**: Navigate to different sections of the application using the header links.
+2. **Login Page**: Enter your email and password. The form provides feedback on password requirements:
+   - At least one lowercase letter
+   - At least one uppercase letter
+   - At least one number
+   - Minimum length of 8 characters
